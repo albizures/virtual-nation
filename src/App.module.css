@@ -1,0 +1,7 @@
+.snap {
+	scroll-snap-type: x mandatory;
+}
+
+.snap_start {
+	scroll-snap-align: start;
+}
