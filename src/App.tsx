@@ -16,6 +16,15 @@ function Section() {
 		const content = contentRef.current!;
 
 		setHeigt(content.scrollWidth);
+
+		function onResize() {
+			setHeigt(content.scrollWidth);
+		}
+		window.addEventListener('resize', onResize);
+
+		return () => {
+			window.removeEventListener('resize', onResize);
+		};
 	}, []);
 
 	React.useEffect(() => {
