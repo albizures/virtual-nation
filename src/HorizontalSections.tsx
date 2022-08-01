@@ -16,9 +16,9 @@ export function HorizontalSections(props: Props) {
 
 	React.useEffect(() => {
 		const content = contentRef.current!;
+		const extraHeight = content.scrollWidth - content.clientWidth;
 
-		setHeigt(content.scrollWidth);
-		console.log(content, content.scrollWidth);
+		setHeigt(content.clientHeight + extraHeight);
 
 		function onResize() {
 			setHeigt(content.scrollWidth);
@@ -33,7 +33,6 @@ export function HorizontalSections(props: Props) {
 	React.useEffect(() => {
 		const container = containerRef.current!;
 		const content = contentRef.current!;
-		console.log(height);
 
 		function onScroll() {
 			content.scrollLeft = window.scrollY - container.offsetTop;
@@ -69,7 +68,7 @@ export function HorizontalSections(props: Props) {
 			<div
 				ref={contentRef}
 				className={clsx(
-					'sticky top-0 - h-screen flex flex-nowrap overflow-hidden',
+					'sticky top-0 h-screen flex flex-nowrap overflow-hidden',
 					className,
 				)}
 			>
