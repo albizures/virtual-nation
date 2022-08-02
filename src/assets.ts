@@ -1,20 +1,6 @@
 import textingImg from '../assets/texting.jpeg';
+import texting1Video from '../assets/texting1.mp4';
+import texting2Video from '../assets/texting2.mp4';
+import networkVideo from '../assets/network.mp4';
 
-export { textingImg };
-
-const assets = [textingImg];
-
-export async function loadAssets() {
-	await Promise.allSettled(
-		assets.map((asset) => {
-			const img = new Image();
-
-			img.src = asset;
-
-			return new Promise((resolve, reject) => {
-				img.onload = resolve;
-				img.onerror = reject;
-			});
-		}),
-	);
-}
+export { textingImg, texting1Video, networkVideo, texting2Video };

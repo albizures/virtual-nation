@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import clsx from 'clsx';
+import { useItemValue } from 'react-take';
+import { assetsStatusItem } from './states';
 
 interface Props {
 	children: React.ReactNode;
@@ -8,6 +10,7 @@ interface Props {
 
 export function HorizontalSections(props: Props) {
 	const { children, className } = props;
+	const assetsStatus = useItemValue(assetsStatusItem);
 
 	const contentRef = useRef<HTMLDivElement>(null);
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -28,7 +31,7 @@ export function HorizontalSections(props: Props) {
 		return () => {
 			window.removeEventListener('resize', onResize);
 		};
-	}, []);
+	}, [assetsStatus]);
 
 	React.useEffect(() => {
 		const container = containerRef.current!;
@@ -68,7 +71,7 @@ export function HorizontalSections(props: Props) {
 			<div
 				ref={contentRef}
 				className={clsx(
-					'sticky top-0 h-screen flex flex-nowrap overflow-hidden',
+					'sticky top-0 h-screen children:inline-block children:vertical-top whitespace-nowrap overflow-hidden',
 					className,
 				)}
 			>
