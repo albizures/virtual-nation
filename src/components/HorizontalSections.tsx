@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import clsx from 'clsx';
 import { useItemValue } from 'react-take';
-import { assetsStatusItem } from './states';
+import { assetsStatusItem } from '../states';
 
 interface Props {
 	children: React.ReactNode;

@@ -4,52 +4,8 @@ import {
 	texting1Video,
 	texting2Video,
 	streamingVideo,
-} from './assets';
-import styles from './App.module.css';
-import { OutlineText } from './OutlineText';
-import clsx from 'clsx';
-
-interface MarqueeProps {
-	className?: string;
-	children: React.ReactNode;
-}
-
-function Marquee(props: MarqueeProps) {
-	const { children, className } = props;
-	return (
-		<div
-			className={clsx(
-				styles.marquee,
-				'w-full overflow-hidden absolute pointer-events-none',
-				className,
-			)}
-		>
-			{children}
-		</div>
-	);
-}
-
-interface MarqueeInnerProps {
-	className: string;
-}
-
-function MarqueeInner(props: MarqueeInnerProps) {
-	const { className } = props;
-	return (
-		<div
-			className={clsx(
-				styles.marquee__inner,
-				'font-bold text-9xl text-white children:inline-block',
-				className,
-			)}
-		>
-			<OutlineText id="super-powers-1" text="SuperPowers" />
-			<OutlineText id="super-powers-2" text="SuperPowers" />
-			<OutlineText id="super-powers-3" text="SuperPowers" />
-			<OutlineText id="super-powers-4" text="SuperPowers" />
-		</div>
-	);
-}
+} from '../assets';
+import { Marquee, MarqueeInner } from './Marquee';
 
 export function UseCases() {
 	return (
