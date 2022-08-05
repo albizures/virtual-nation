@@ -1,12 +1,65 @@
 import { HorizontalSections } from './HorizontalSections';
-import { networkVideo, texting1Video, texting2Video } from './assets';
+import {
+	networkVideo,
+	texting1Video,
+	texting2Video,
+	streamingVideo,
+} from './assets';
+import styles from './App.module.css';
+import { OutlineText } from './OutlineText';
+import clsx from 'clsx';
+
+interface MarqueeProps {
+	className?: string;
+	children: React.ReactNode;
+}
+
+function Marquee(props: MarqueeProps) {
+	const { children, className } = props;
+	return (
+		<div
+			className={clsx(
+				styles.marquee,
+				'w-full overflow-hidden absolute pointer-events-none',
+				className,
+			)}
+		>
+			{children}
+		</div>
+	);
+}
+
+interface MarqueeInnerProps {
+	className: string;
+}
+
+function MarqueeInner(props: MarqueeInnerProps) {
+	const { className } = props;
+	return (
+		<div
+			className={clsx(
+				styles.marquee__inner,
+				'font-bold text-9xl text-white children:inline-block',
+				className,
+			)}
+		>
+			<OutlineText id="super-powers-1" text="SuperPowers" />
+			<OutlineText id="super-powers-2" text="SuperPowers" />
+			<OutlineText id="super-powers-3" text="SuperPowers" />
+			<OutlineText id="super-powers-4" text="SuperPowers" />
+		</div>
+	);
+}
 
 export function UseCases() {
 	return (
 		<HorizontalSections className="bg-white text-stone-6 vertical-top">
 			<div className="h-full">
 				<div className="flex items-center h-full">
-					<h2 className="ml-10 mr-8 uppercase font-bold">
+					<Marquee className="top-0 left-0">
+						<MarqueeInner className="-top-18" />
+					</Marquee>
+					<h2 className="ml-10 mr-8 uppercase font-bold font-sans">
 						<span className="block text-5xl whitespace-nowrap">
 							The virtual nation app
 						</span>{' '}
@@ -22,7 +75,7 @@ export function UseCases() {
 						autoPlay={true}
 						src={networkVideo}
 					></video>
-					<h3 className="transform whitespace-nowrap text-center translate-x-0 rotate-90 text-7xl text-black font-bold">
+					<h3 className="transform uppercase whitespace-nowrap font-sans text-center translate-x-0 rotate-90 text-6xl text-black font-bold">
 						Use Cases
 					</h3>
 				</div>
@@ -30,7 +83,7 @@ export function UseCases() {
 
 			<div className="px-15 mr-15 h-full">
 				<div className="flex h-full justify-center flex-col">
-					<h2 className="text-8xl uppercase font-bold">
+					<h2 className="text-8xl uppercase font-bold font-sans">
 						<span className="block">Immediate</span>
 						<span className="block">organized</span>
 						<span className="block underline underline-yellow-2">
@@ -38,15 +91,18 @@ export function UseCases() {
 						</span>
 					</h2>
 					<div className="mt-16">
-						<button className="border text-xl py-5 px-10 border-stone-6">
-							know more {'-->'}
+						<button className="btn py-5 px-10">
+							Know more {'-->'}
 						</button>
 					</div>
 				</div>
 			</div>
-			<div className="py-10 h-full mr-30">
+			<div className="py-10 h-full mr-30 relative">
+				<Marquee className="-rotate-90 transform bottom-0 left-15 w-screen origin-bottom-left z-10">
+					<MarqueeInner className="top-0" />
+				</Marquee>
 				<video
-					className="h-full"
+					className="h-full relative z-12"
 					loop={true}
 					muted={true}
 					autoPlay={true}
@@ -55,7 +111,7 @@ export function UseCases() {
 			</div>
 			<div className="h-full mr-30">
 				<div className="flex flex-col justify-center h-full">
-					<h2 className="text-7xl font-bold uppercase">
+					<h2 className="text-7xl font-bold uppercase font-sans">
 						Immediate{' '}
 						<span className="text-8xl block underline underline-yellow-2">
 							response
@@ -68,22 +124,25 @@ export function UseCases() {
 						</span>
 					</h2>
 					<div className="mt-16">
-						<button className="border text-xl py-5 px-10 border-stone-6">
-							know more {'-->'}
+						<button className="btn py-5 px-10">
+							Know more {'-->'}
 						</button>
 					</div>
 				</div>
 			</div>
-			<div className="py-10 h-full mr-30">
+			<div className="py-10 h-full mr-30 relative">
+				<Marquee className="-rotate-90 transform bottom-0 left-15 w-screen origin-bottom-left z-10">
+					<MarqueeInner className="top-0" />
+				</Marquee>
 				<video
-					className="h-full"
+					className="h-full relative z-12"
 					loop={true}
 					muted={true}
 					autoPlay={true}
 					src={texting2Video}
 				></video>
 			</div>
-			<div className="h-full">
+			<div className="h-full mr-30">
 				<div className="h-full flex justify-center flex-col">
 					<h3 className="text-7xl uppercase font-bold">
 						<span className="block whitespace-nowrap">
@@ -97,11 +156,23 @@ export function UseCases() {
 						</span>
 					</h3>
 					<div className="mt-16">
-						<button className="border text-xl py-5 px-10 border-stone-6">
-							know more {'-->'}
+						<button className="btn py-5 px-10">
+							Know more {'-->'}
 						</button>
 					</div>
 				</div>
+			</div>
+			<div className="py-10 h-full relative">
+				<Marquee className="-rotate-90 transform bottom-0 left-15 w-screen origin-bottom-left z-10">
+					<MarqueeInner className="top-0" />
+				</Marquee>
+				<video
+					className="h-full relative z-12"
+					loop={true}
+					muted={true}
+					autoPlay={true}
+					src={streamingVideo}
+				></video>
 			</div>
 		</HorizontalSections>
 	);

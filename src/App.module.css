@@ -1,7 +1,17 @@
-.snap {
-	scroll-snap-type: x mandatory;
+.marquee__inner {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	transform: translateX(0%);
+	animation: marquee 10s linear infinite;
 }
 
-.snap_start {
-	scroll-snap-align: start;
+@keyframes marquee {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
 }
