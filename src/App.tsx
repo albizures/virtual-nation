@@ -5,6 +5,7 @@ import { ScreenSection } from './components/ScreenSection';
 import { assetsStatusItem } from './states';
 import { UseCases } from './components/UseCases';
 import { useWaitForAssets } from './useWaitForAssets';
+import { Header, StickyHeader } from './components/Header';
 
 export function App() {
 	const status = useItemValue(assetsStatusItem, 'loading');
@@ -13,8 +14,10 @@ export function App() {
 	return (
 		<>
 			{status === 'loading' && (
-				<div className="fixed inset-0 bg-white z-10">loading...</div>
+				<div className="fixed inset-0 bg-white z-20">loading...</div>
 			)}
+			<Header />
+			<StickyHeader />
 			<div ref={ref} className="bg-black text-white">
 				<Hero />
 				<UseCases />

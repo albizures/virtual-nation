@@ -16,8 +16,8 @@ export function OutlineText(props: OutlineText) {
 				<symbol id={id}>
 					<text
 						className="font-sans text-9xl"
-						font-weight="bold"
-						text-anchor="middle"
+						fontWeight="bold"
+						textAnchor="middle"
 						x="50%"
 						y="80%"
 					>

@@ -9,9 +9,11 @@ import googleImg from '../assets/google.png';
 import lockImg from '../assets/lock.png';
 import configImg from '../assets/config.png';
 import supportImg from '../assets/support.png';
+import logoImg from '../assets/logo.svg';
 
 export {
 	backgroundVideo,
+	logoImg,
 	textingImg,
 	texting1Video,
 	networkVideo,

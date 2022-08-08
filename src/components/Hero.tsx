@@ -38,7 +38,7 @@ export function Hero() {
 			<h1 className="text-4xl relative mt-30 text-center font-sans uppercase font-bold text-shadow-sm">
 				<span className="block">The virtual nation app </span>
 				<span className="block">gives creators</span>
-				<span className="block underline underline-yellow underline-4">
+				<span className="block underline underline-yellow-2 underline-4">
 					superpowers
 				</span>
 			</h1>
