@@ -7,6 +7,8 @@ export default defineConfig({
 		},
 	},
 	shortcuts: {
+		arrow:
+			'inline-block animate-fade-out animate-count-infinite animate-duration-1s',
 		btn: 'border text-3xl font-sans border-stone-6',
 	},
 });
