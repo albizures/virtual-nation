@@ -13,7 +13,7 @@ export function UseCases() {
 			<div className="h-full">
 				<div className="flex items-center h-full">
 					<Marquee className="top-0 left-0">
-						<MarqueeInner className="-top-18" />
+						<MarqueeInner />
 					</Marquee>
 					<h2 className="ml-10 mr-8 uppercase font-bold font-sans">
 						<span className="block text-5xl whitespace-nowrap">

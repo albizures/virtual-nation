@@ -22,7 +22,7 @@ export function Marquee(props: MarqueeProps) {
 }
 
 interface MarqueeInnerProps {
-	className: string;
+	className?: string;
 }
 
 export function MarqueeInner(props: MarqueeInnerProps) {

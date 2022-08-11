@@ -32,11 +32,8 @@ export function StickyHeader() {
 	React.useEffect(() => {
 		function onScroll() {
 			if (window.scrollY > window.innerHeight - 100) {
-				console.log('shown');
-
 				setStatus('shown');
 			} else {
-				console.log('hidden');
 				setStatus('hidden');
 			}
 		}

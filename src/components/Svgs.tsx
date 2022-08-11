@@ -8,7 +8,7 @@ export function Arrow(props: IconProps) {
 	return (
 		<svg
 			version="1.1"
-			width="2m"
+			width="2rem"
 			height="2em"
 			viewBox="0 0 51 78"
 			stroke="currentColor"

@@ -10,12 +10,14 @@
 	},
 	"dependencies": {
 		"clsx": "^1.2.1",
+		"lodash.throttle": "^4.1.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-take": "^0.1.5"
+		"react-take": "0.2.1"
 	},
 	"devDependencies": {
 		"@albizures/prettier-config": "^1.0.1",
+		"@types/lodash.throttle": "^4.1.7",
 		"@types/react": "^18.0.15",
 		"@types/react-dom": "^18.0.6",
 		"@unocss/reset": "^0.44.7",
