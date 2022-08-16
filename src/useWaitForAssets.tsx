@@ -41,25 +41,31 @@ export function Progress() {
 			setStatus('hiding');
 			const timer = setTimeout(() => {
 				setStatus('hidden');
-			}, 1000);
+			}, 500);
+
+			return () => {
+				clearTimeout(timer);
+			};
 		}
 	}, [progress]);
 
 	if (status === 'hidden') {
 		return null;
 	}
+	console.log(status);
 
 	return (
 		<div
 			className={clsx(
-				'fixed opacity-100 transition-all transition-200 inset-0 bg-white z-20 flex justify-center items-center',
+				'fixed transition-opacity duration-400 inset-0 bg-white z-20 flex justify-center items-center',
 				{
 					'opacity-0': status === 'hiding',
+					'opacity-100': status === 'shown',
 				},
 			)}
 		>
 			<div
-				className="bg-yellow transition-all transition-200 h-full absolute top-0 left-0"
+				className="bg-yellow transition-width duration-400 h-full absolute top-0 left-0"
 				style={{
 					width: `${(progress.progress / progress.total) * 100}%`,
 				}}
