@@ -11,7 +11,7 @@ export function UseCases() {
 	return (
 		<HorizontalSections className="bg-white text-stone-6 vertical-top">
 			<div className="h-full">
-				<div className="flex items-center h-full">
+				<div className="flex items-center h-full pr-80">
 					<Marquee className="top-0 left-0">
 						<MarqueeInner />
 					</Marquee>

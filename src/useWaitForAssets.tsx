@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React from 'react';
 import {
 	useSetItem,
@@ -6,9 +7,9 @@ import {
 	useItemValue,
 } from 'react-take';
 import { assetsStatusItem } from './states';
-import throttle from 'lodash.throttle';
+import { Logo } from './components/Logo';
 
-interface ProgressStatus {
+interface ProgressState {
 	total: number;
 	progress: number;
 }
@@ -17,7 +18,7 @@ const defaultProgress = {
 	progress: 0,
 };
 
-export const progressItem = createItem<ProgressStatus>(
+export const progressItem = createItem<ProgressState>(
 	'progress',
 	defaultProgress,
 );
@@ -29,23 +30,42 @@ function getTagElements<T extends HTMLElement>(
 	return Array.from(parent.getElementsByTagName(name) ?? []) as T[];
 }
 
+type ProgressStatus = 'shown' | 'hidden' | 'hiding';
+
 export function Progress() {
 	const progress = useItemValue(progressItem, defaultProgress);
+	const [status, setStatus] = React.useState<ProgressStatus>('shown');
 
-	if (progress.progress >= progress.total) {
+	React.useEffect(() => {
+		if (progress.progress >= progress.total) {
+			setStatus('hiding');
+			const timer = setTimeout(() => {
+				setStatus('hidden');
+			}, 1000);
+		}
+	}, [progress]);
+
+	if (status === 'hidden') {
 		return null;
 	}
 
 	return (
-		<div className="fixed inset-0 bg-white z-20 flex justify-center items-center">
+		<div
+			className={clsx(
+				'fixed opacity-100 transition-all transition-200 inset-0 bg-white z-20 flex justify-center items-center',
+				{
+					'opacity-0': status === 'hiding',
+				},
+			)}
+		>
 			<div
-				className="bg-yellow transition-all h-full absolute top-0 left-0"
+				className="bg-yellow transition-all transition-200 h-full absolute top-0 left-0"
 				style={{
 					width: `${(progress.progress / progress.total) * 100}%`,
 				}}
 			/>
 			<div className="z-10">
-				{progress.progress}/{progress.total}
+				<Logo className="max-h-40 animate-pulse-alt" />
 			</div>
 		</div>
 	);
@@ -90,7 +110,6 @@ async function waitForAssets(parent: HTMLElement) {
 }
 
 export function useWaitForAssets() {
-	const setStatus = useSetItem(assetsStatusItem);
 	const ref = React.useRef<HTMLDivElement>(null);
 
 	React.useEffect(() => {

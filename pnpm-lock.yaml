@@ -2,13 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   '@albizures/prettier-config': ^1.0.1
-  '@types/lodash.throttle': ^4.1.7
   '@types/react': ^18.0.15
   '@types/react-dom': ^18.0.6
   '@unocss/reset': ^0.44.7
   '@vitejs/plugin-react': ^2.0.0
   clsx: ^1.2.1
-  lodash.throttle: ^4.1.1
   react: ^18.2.0
   react-dom: ^18.2.0
   react-take: 0.2.1
@@ -18,14 +16,12 @@ specifiers:
 
 dependencies:
   clsx: 1.2.1
-  lodash.throttle: 4.1.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-take: 0.2.1_react@18.2.0
 
 devDependencies:
   '@albizures/prettier-config': 1.0.1
-  '@types/lodash.throttle': 4.1.7
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
   '@unocss/reset': 0.44.7
@@ -398,16 +394,6 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
-    dev: true
-
-  /@types/lodash.throttle/4.1.7:
-    resolution: {integrity: sha512-znwGDpjCHQ4FpLLx19w4OXDqq8+OvREa05H89obtSyXyOFKL3dDjCslsmfBz0T2FU8dmf5Wx1QvogbINiGIu9g==}
-    dependencies:
-      '@types/lodash': 4.14.182
-    dev: true
-
-  /@types/lodash/4.14.182:
-    resolution: {integrity: sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q==}
     dev: true
 
   /@types/prop-types/15.7.5:
@@ -1135,10 +1121,6 @@ packages:
     dependencies:
       p-locate: 5.0.0
     dev: true
-
-  /lodash.throttle/4.1.1:
-    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
-    dev: false
 
   /loose-envify/1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}

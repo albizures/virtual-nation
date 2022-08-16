@@ -43,7 +43,6 @@ export function HorizontalSections(props: Props) {
 			setHeigt(content.clientHeight + extraHeight);
 
 			content.scrollLeft = window.scrollY - container.offsetTop;
-			console.log('dd', content.scrollLeft);
 		}
 
 		const observer = new IntersectionObserver(
