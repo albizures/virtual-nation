@@ -1,12 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import {
-	useSetItem,
-	store,
-	createItem,
-	useItemValue,
-} from 'react-take';
-import { assetsStatusItem } from './states';
+import { store, createItem, useItemValue } from 'react-take';
 import { Logo } from './components/Logo';
 
 interface ProgressState {
@@ -42,7 +36,6 @@ export function Progress() {
 			const timer = setTimeout(() => {
 				setStatus('hidden');
 			}, 500);
-
 			return () => {
 				clearTimeout(timer);
 			};
@@ -52,12 +45,11 @@ export function Progress() {
 	if (status === 'hidden') {
 		return null;
 	}
-	console.log(status);
 
 	return (
 		<div
 			className={clsx(
-				'fixed transition-opacity duration-400 inset-0 bg-white z-20 flex justify-center items-center',
+				'fixed transition-opacity duration-400 inset-0 bg-white z-20',
 				{
 					'opacity-0': status === 'hiding',
 					'opacity-100': status === 'shown',
@@ -70,7 +62,7 @@ export function Progress() {
 					width: `${(progress.progress / progress.total) * 100}%`,
 				}}
 			/>
-			<div className="z-10">
+			<div className="z-10 text-black z-24 absolute inset-0 flex justify-center items-center">
 				<Logo className="max-h-40 animate-pulse-alt" />
 			</div>
 		</div>

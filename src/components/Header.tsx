@@ -47,7 +47,7 @@ export function StickyHeader() {
 	return (
 		<div
 			className={clsx(
-				'flex fixed w-full transition-all z-30 bg-black text-yellow-2 items-center justify-around text-xl',
+				'flex fixed w-full transition-all h-16 z-30 bg-black text-yellow-2 items-center justify-around text-xl',
 				{
 					'top-0': status === 'shown',
 					'-top-16': status === 'hidden',
