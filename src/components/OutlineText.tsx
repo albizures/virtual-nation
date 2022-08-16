@@ -2,15 +2,23 @@ interface OutlineText {
 	text: string;
 	id: string;
 	className?: string;
+	width?: string;
+	height?: string;
 }
 
 export function OutlineText(props: OutlineText) {
-	const { text, id, className } = props;
+	const {
+		text,
+		id,
+		className,
+		width = '840',
+		height = '140',
+	} = props;
 	return (
 		<span className={`inline-block ${className}`}>
 			<svg
-				width="840"
-				height="140"
+				width={width}
+				height={height}
 				xmlns="http://www.w3.org/2000/svg"
 			>
 				<symbol id={id}>
