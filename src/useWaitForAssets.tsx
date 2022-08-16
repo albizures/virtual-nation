@@ -31,7 +31,6 @@ function getTagElements<T extends HTMLElement>(
 
 export function Progress() {
 	const progress = useItemValue(progressItem, defaultProgress);
-	console.log('progress', progress);
 
 	if (progress.progress >= progress.total) {
 		return null;

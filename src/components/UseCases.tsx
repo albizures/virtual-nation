@@ -53,7 +53,7 @@ export function UseCases() {
 					</div>
 				</div>
 			</div>
-			<div className="py-10 h-full mr-30 relative">
+			<div className="py-6 h-full mr-30 relative">
 				<Marquee className="-rotate-90 transform bottom-0 left-15 w-screen origin-bottom-left z-10">
 					<MarqueeInner className="top-0" />
 				</Marquee>
@@ -86,7 +86,7 @@ export function UseCases() {
 					</div>
 				</div>
 			</div>
-			<div className="py-10 h-full mr-30 relative">
+			<div className="py-6 h-full mr-30 relative">
 				<Marquee className="-rotate-90 transform bottom-0 left-15 w-screen origin-bottom-left z-10">
 					<MarqueeInner className="top-0" />
 				</Marquee>
@@ -118,7 +118,7 @@ export function UseCases() {
 					</div>
 				</div>
 			</div>
-			<div className="py-10 h-full relative">
+			<div className="py-6 h-full relative">
 				<Marquee className="-rotate-90 transform bottom-0 left-15 w-screen origin-bottom-left z-10">
 					<MarqueeInner className="top-0" />
 				</Marquee>
