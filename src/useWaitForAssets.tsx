@@ -63,7 +63,7 @@ export function Progress() {
 				}}
 			/>
 			<div className="z-10 text-black z-24 absolute inset-0 flex justify-center items-center">
-				<Logo className="max-h-40 animate-pulse-alt" />
+				<Logo className="h-40 animate-pulse-alt" />
 			</div>
 		</div>
 	);
