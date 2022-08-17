@@ -31,6 +31,15 @@ export function Progress() {
 	const [status, setStatus] = React.useState<ProgressStatus>('shown');
 
 	React.useEffect(() => {
+		if (status === 'shown') {
+			window.screenTop = 0;
+			document.body.style.overflow = 'hidden';
+		} else if ('hidden') {
+			document.body.style.overflow = '';
+		}
+	}, [status]);
+
+	React.useEffect(() => {
 		if (progress.progress >= progress.total) {
 			setStatus('hiding');
 			const timer = setTimeout(() => {

@@ -1,10 +1,14 @@
 import { Logo } from './Logo';
-
-export function Icon() {
-	return (
-		<span className="rounded-sm bg-yellow w-2 h-2 inline-block mr-3"></span>
-	);
-}
+import { IoIosChatboxes } from 'react-icons/io';
+import {
+	RiSignalTowerFill,
+	RiRobotFill,
+	RiTwitterFill,
+	RiFacebookFill,
+	RiLinkedinFill,
+	RiGithubFill,
+	RiMailLine,
+} from 'react-icons/ri';
 
 export function Footer() {
 	return (
@@ -13,7 +17,7 @@ export function Footer() {
 				<div className="max-w-5xl mx-auto flex py-8 justify-between">
 					<div>
 						<h4 className="text-sm">
-							<Icon />
+							<IoIosChatboxes className="inline-block -ml-1 h-4 w-4 mr-3 text-yellow" />
 							<span className="align-middle">Chat Messaging</span>
 						</h4>
 						<ul className="tree">
@@ -28,7 +32,7 @@ export function Footer() {
 					</div>
 					<div>
 						<h4 className="text-sm">
-							<Icon />
+							<RiSignalTowerFill className="inline-block -ml-0.5 h-4 w-4 mr-3 text-yellow" />
 							<span className="align-middle">Activity Feeds</span>
 						</h4>
 						<ul className="tree">
@@ -44,7 +48,7 @@ export function Footer() {
 					</div>
 					<div>
 						<h4 className="text-sm">
-							<Icon />
+							<RiRobotFill className="inline-block -ml-1 h-4 w-4 mr-3 text-yellow" />
 							<span className="align-middle">Auto Moderation</span>
 						</h4>
 						<h4 className="text-sm mt-6">
@@ -84,17 +88,46 @@ export function Footer() {
 					</div>
 					<div className="flex justify-between mt-4">
 						<p>
-							<Icon />
-							System Status © All Rights Reserved
+							<span className="rounded bg-green w-2 h-2 inline-block mr-1"></span>
+							<span className="opacity-50">
+								System Status{' '}
+								<span className="font-italic">
+									© All Rights Reserved
+								</span>
+							</span>
 						</p>
-						<ul className="flex space-x-4">
-							<li>Terms</li>
-							<li>Privacy</li>
-							<li>Tw</li>
-							<li>Fb</li>
-							<li>In</li>
-							<li>Gh</li>
-							<li>Em</li>
+						<ul className="flex space-x-4 items-center">
+							<li className="opacity-50 hover:underline">
+								<a href="#">Privacy</a>
+							</li>
+							<li className="opacity-50 hover:underline">
+								<a className="mr-2" href="#">
+									Privacy
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com" target="_blank">
+									<RiTwitterFill />
+								</a>
+							</li>
+							<li>
+								<a href="https://fb.com" target="_blank">
+									<RiFacebookFill />
+								</a>
+							</li>
+							<li>
+								<a href="https://linkedin.com" target="_blank">
+									<RiLinkedinFill />
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com" target="_blank">
+									<RiGithubFill />
+								</a>
+							</li>
+							<li>
+								<RiMailLine />
+							</li>
 						</ul>
 					</div>
 				</div>
