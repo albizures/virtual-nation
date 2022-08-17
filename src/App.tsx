@@ -4,6 +4,7 @@ import { UseCases } from './components/UseCases';
 import { useWaitForAssets, Progress } from './useWaitForAssets';
 import { Header, StickyHeader } from './components/Header';
 import { Pricing } from './components/Pricing';
+import { Footer } from './components/Footer';
 
 export function App() {
 	// const status = useItemValue(assetsStatusItem, 'loading');
@@ -19,9 +20,7 @@ export function App() {
 				<UseCases />
 			</div>
 			<Pricing />
-			<footer>
-				<h2>footer</h2>
-			</footer>
+			<Footer />
 		</>
 	);
 }

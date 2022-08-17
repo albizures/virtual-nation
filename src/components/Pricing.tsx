@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React from 'react';
-import { OutlineText } from './OutlineText';
 
 interface PlanActionProps {
 	label?: string;
@@ -152,10 +151,7 @@ function Title() {
 
 export function Pricing() {
 	return (
-		<div className="max-w-5xl mx-auto">
-			{/* <h1 className="text-center text-6xl uppercase mt-20 mb-6 font-sans font-bold">
-				Pricing
-			</h1> */}
+		<div className="max-w-5xl mx-auto pb-16">
 			<Title />
 			<div className="flex w-full ">
 				<div className="grow-1.5">
@@ -185,7 +181,7 @@ export function Pricing() {
 							</span>
 						</Cell>
 						<Cell>Advanced Moderation</Cell>
-						<Cell>Moderation Dashboard</Cell>
+						<div className="pb-3 mt-3">Moderation Dashboard</div>
 					</div>
 				</div>
 				<div className="grow-1">
@@ -214,7 +210,8 @@ export function Pricing() {
 						<Cell>Email</Cell>
 						<Cell>Included</Cell>
 						<Cell>Additional fees apply</Cell>
-						<Cell>Included</Cell>
+
+						<div className="pb-3 mt-3">Included</div>
 					</div>
 				</div>
 				<div className="grow-1">
@@ -243,7 +240,7 @@ export function Pricing() {
 						<Cell>Email</Cell>
 						<Cell>Included</Cell>
 						<Cell>Additional fees apply</Cell>
-						<Cell>Included</Cell>
+						<div className="pb-3 mt-3">Included</div>
 					</div>
 				</div>
 				<div className="grow-1">
@@ -272,7 +269,7 @@ export function Pricing() {
 						<Cell>Email + Support Calls</Cell>
 						<Cell>Included</Cell>
 						<Cell>Additional fees apply</Cell>
-						<Cell>Included</Cell>
+						<div className="pb-3 mt-3">Included</div>
 					</div>
 				</div>
 				<div className="grow-1">
@@ -293,7 +290,7 @@ export function Pricing() {
 						<Cell>Email + Support Calls</Cell>
 						<Cell>Included</Cell>
 						<Cell>Additional fees apply</Cell>
-						<Cell>Included</Cell>
+						<div className="pb-3 mt-3">Included</div>
 					</div>
 				</div>
 			</div>
