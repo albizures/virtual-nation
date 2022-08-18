@@ -7,7 +7,6 @@ import { Pricing } from './components/Pricing';
 import { Footer } from './components/Footer';
 
 export function App() {
-	// const status = useItemValue(assetsStatusItem, 'loading');
 	const ref = useWaitForAssets();
 
 	return (

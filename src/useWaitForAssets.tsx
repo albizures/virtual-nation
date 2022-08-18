@@ -66,7 +66,7 @@ export function Progress() {
 			)}
 		>
 			<div
-				className="bg-yellow transition-width duration-400 h-full absolute top-0 left-0"
+				className="bg-nation transition-width duration-400 h-full absolute top-0 left-0"
 				style={{
 					width: `${(progress.progress / progress.total) * 100}%`,
 				}}

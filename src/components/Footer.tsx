@@ -17,7 +17,7 @@ export function Footer() {
 				<div className="max-w-5xl mx-auto flex py-8 justify-between">
 					<div>
 						<h4 className="text-sm">
-							<IoIosChatboxes className="inline-block -ml-1 h-4 w-4 mr-3 text-yellow" />
+							<IoIosChatboxes className="inline-block -ml-1 h-4 w-4 mr-3 text-nation" />
 							<span className="align-middle">Chat Messaging</span>
 						</h4>
 						<ul className="tree">
@@ -32,7 +32,7 @@ export function Footer() {
 					</div>
 					<div>
 						<h4 className="text-sm">
-							<RiSignalTowerFill className="inline-block -ml-0.5 h-4 w-4 mr-3 text-yellow" />
+							<RiSignalTowerFill className="inline-block -ml-0.5 h-4 w-4 mr-3 text-nation" />
 							<span className="align-middle">Activity Feeds</span>
 						</h4>
 						<ul className="tree">
@@ -48,7 +48,7 @@ export function Footer() {
 					</div>
 					<div>
 						<h4 className="text-sm">
-							<RiRobotFill className="inline-block -ml-1 h-4 w-4 mr-3 text-yellow" />
+							<RiRobotFill className="inline-block -ml-1 h-4 w-4 mr-3 text-nation" />
 							<span className="align-middle">Auto Moderation</span>
 						</h4>
 						<h4 className="text-sm mt-6">

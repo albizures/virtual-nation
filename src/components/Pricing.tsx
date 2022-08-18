@@ -157,7 +157,7 @@ export function Pricing() {
 				<div className="grow-1.5">
 					<Header className="flex flex-col justify-between">
 						<div>
-							<button className="bg-yellow rounded-xl uppercase font-bold tracking-widest pb-1 font-sans px-4">
+							<button className="bg-nation rounded-xl uppercase font-bold tracking-widest pb-1 font-sans px-4">
 								STARt free trial
 							</button>
 						</div>

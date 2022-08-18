@@ -6,6 +6,12 @@ function shortcut(...values: string[]) {
 
 export default defineConfig({
 	theme: {
+		colors: {
+			nation: {
+				DEFAULT: '#ffe600',
+				light: '#ffff00',
+			},
+		},
 		fontFamily: {
 			sans: ['century-gothic'],
 		},

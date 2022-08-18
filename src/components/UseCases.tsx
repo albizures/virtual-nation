@@ -20,7 +20,7 @@ export function UseCases() {
 							The virtual nation app
 						</span>{' '}
 						<span className="block text-7xl">gives creators</span>
-						<span className="block text-8xl underline-yellow-2 underline">
+						<span className="block text-8xl underline-nation underline">
 							superpowers
 						</span>
 					</h2>
@@ -42,7 +42,7 @@ export function UseCases() {
 					<h2 className="text-8xl uppercase font-bold font-sans">
 						<span className="block">Immediate</span>
 						<span className="block">organized</span>
-						<span className="block underline underline-yellow-2">
+						<span className="block underline underline-nation">
 							communication
 						</span>
 					</h2>
@@ -69,7 +69,7 @@ export function UseCases() {
 				<div className="flex flex-col justify-center h-full">
 					<h2 className="text-7xl font-bold uppercase font-sans">
 						Immediate{' '}
-						<span className="text-8xl block underline underline-yellow-2">
+						<span className="text-8xl block underline underline-nation">
 							response
 						</span>
 						<span className="block mt-4 whitespace-nowrap">
