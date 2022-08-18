@@ -5,9 +5,9 @@ import {
 	googleImg,
 	lockImg,
 	supportImg,
-} from '../assets';
-import { ScreenSection } from './ScreenSection';
-import { Arrow, Arrows } from './Svgs';
+} from '../../assets';
+import { ScreenSection } from '../ScreenSection';
+import { Arrow, Arrows } from '../Svgs';
 
 interface FeatureProps {
 	label: string;

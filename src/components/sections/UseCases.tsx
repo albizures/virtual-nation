@@ -1,11 +1,11 @@
-import { HorizontalSections } from './HorizontalSections';
+import { HorizontalSections } from '../HorizontalSections';
 import {
 	networkVideo,
 	texting1Video,
 	texting2Video,
 	streamingVideo,
-} from '../assets';
-import { Marquee, MarqueeInner } from './Marquee';
+} from '../../assets';
+import { Marquee, MarqueeInner } from '../Marquee';
 
 export function UseCases() {
 	return (

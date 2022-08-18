@@ -1,10 +1,10 @@
 import React from 'react';
-import { Hero } from './components/Hero';
-import { UseCases } from './components/UseCases';
+import { Hero } from './components/sections/Hero';
+import { UseCases } from './components/sections/UseCases';
 import { useWaitForAssets, Progress } from './useWaitForAssets';
 import { Header, StickyHeader } from './components/Header';
-import { Pricing } from './components/Pricing';
-import { Footer } from './components/Footer';
+import { Pricing } from './components/sections/Pricing';
+import { Footer } from './components/sections/Footer';
 
 export function App() {
 	const ref = useWaitForAssets();

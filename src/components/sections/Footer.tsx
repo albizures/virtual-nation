@@ -1,4 +1,4 @@
-import { Logo } from './Logo';
+import { Logo } from '../Logo';
 import { IoIosChatboxes } from 'react-icons/io';
 import {
 	RiSignalTowerFill,
@@ -9,6 +9,26 @@ import {
 	RiGithubFill,
 	RiMailLine,
 } from 'react-icons/ri';
+import { ImArrowUpRight2 } from 'react-icons/im';
+
+interface ItemTreeProps {
+	children: React.ReactNode;
+	type?: 'external' | 'normal';
+}
+
+function ItemTree(props: ItemTreeProps) {
+	const { children, type = 'normal' } = props;
+	return (
+		<li className="tree-item">
+			<a className="hover:underline">
+				{children}
+				{type === 'external' && (
+					<ImArrowUpRight2 className="inline-block w-2.5 h-2.5 ml-0.5" />
+				)}
+			</a>
+		</li>
+	);
+}
 
 export function Footer() {
 	return (
@@ -21,13 +41,13 @@ export function Footer() {
 							<span className="align-middle">Chat Messaging</span>
 						</h4>
 						<ul className="tree">
-							<li className="tree-item">Pricing</li>
-							<li className="tree-item">Docs</li>
-							<li className="tree-item">Solutions</li>
-							<li className="tree-item">SDKs</li>
-							<li className="tree-item">UI Kits</li>
-							<li className="tree-item">API Tour</li>
-							<li className="tree-item">Chat Demos</li>
+							<ItemTree>Pricing</ItemTree>
+							<ItemTree>Docs</ItemTree>
+							<ItemTree>Solutions</ItemTree>
+							<ItemTree>SDKs</ItemTree>
+							<ItemTree>UI Kits</ItemTree>
+							<ItemTree>API Tour</ItemTree>
+							<ItemTree>Chat Demos</ItemTree>
 						</ul>
 					</div>
 					<div>
@@ -36,14 +56,14 @@ export function Footer() {
 							<span className="align-middle">Activity Feeds</span>
 						</h4>
 						<ul className="tree">
-							<li className="tree-item">Pricing</li>
-							<li className="tree-item">Docs</li>
-							<li className="tree-item">Notification Feeds</li>
-							<li className="tree-item">Personalization</li>
-							<li className="tree-item">SDKs</li>
-							<li className="tree-item">UI Kits</li>
-							<li className="tree-item">Build Social Networks</li>
-							<li className="tree-item">Try the API</li>
+							<ItemTree>Pricing</ItemTree>
+							<ItemTree>Docs</ItemTree>
+							<ItemTree>Notification Feeds</ItemTree>
+							<ItemTree>Personalization</ItemTree>
+							<ItemTree>SDKs</ItemTree>
+							<ItemTree>UI Kits</ItemTree>
+							<ItemTree>Build Social Networks</ItemTree>
+							<ItemTree>Try the API</ItemTree>
 						</ul>
 					</div>
 					<div>
@@ -58,20 +78,20 @@ export function Footer() {
 							</span>
 						</h4>
 						<ul className="tree">
-							<li className="tree-item">About us</li>
-							<li className="tree-item">Careers</li>
-							<li className="tree-item">Enterprise</li>
-							<li className="tree-item">Glossary</li>
-							<li className="tree-item">Blog /</li>
-							<li className="tree-item">Case Studies /</li>
+							<ItemTree>About us</ItemTree>
+							<ItemTree>Careers</ItemTree>
+							<ItemTree>Enterprise</ItemTree>
+							<ItemTree>Glossary</ItemTree>
+							<ItemTree type="external">Blog</ItemTree>
+							<ItemTree type="external">Case Studies</ItemTree>
 						</ul>
 					</div>
 					<div>
 						<h4 className="text-sm">Contact Us</h4>
 						<ul className="tree">
-							<li className="tree-item">Sales</li>
-							<li className="tree-item">Support</li>
-							<li className="tree-item">Bug Report</li>
+							<ItemTree>Sales</ItemTree>
+							<ItemTree>Support</ItemTree>
+							<ItemTree>Bug Report</ItemTree>
 						</ul>
 					</div>
 				</div>
