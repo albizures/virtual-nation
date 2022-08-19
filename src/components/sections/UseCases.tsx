@@ -6,6 +6,7 @@ import {
 	streamingVideo,
 } from '../../assets';
 import { Marquee, MarqueeInner } from '../Marquee';
+import { LongArrow } from '../Svgs';
 
 export function UseCases() {
 	return (
@@ -47,8 +48,8 @@ export function UseCases() {
 						</span>
 					</h2>
 					<div className="mt-16">
-						<button className="btn py-5 px-10">
-							Know more {'-->'}
+						<button className="btn py-5 pl-10 pr-8">
+							Know more <LongArrow className="inline-block" />
 						</button>
 					</div>
 				</div>
@@ -80,8 +81,8 @@ export function UseCases() {
 						</span>
 					</h2>
 					<div className="mt-16">
-						<button className="btn py-5 px-10">
-							Know more {'-->'}
+						<button className="btn py-5 pl-10 pr-8">
+							Know more <LongArrow className="inline-block " />
 						</button>
 					</div>
 				</div>
@@ -112,8 +113,8 @@ export function UseCases() {
 						</span>
 					</h3>
 					<div className="mt-16">
-						<button className="btn py-5 px-10">
-							Know more {'-->'}
+						<button className="btn py-5 pl-10 pr-8">
+							Know more <LongArrow className="inline-block" />
 						</button>
 					</div>
 				</div>

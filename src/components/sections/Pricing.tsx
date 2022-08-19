@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import { ArrowMessage } from '../Svgs';
 
 interface PlanActionProps {
 	label?: string;
@@ -151,13 +152,19 @@ function Title() {
 
 export function Pricing() {
 	return (
-		<div className="max-w-5xl mx-auto pb-16">
+		<div className="max-w-5xl mx-auto pb-16 relative">
 			<Title />
+			<div className="rounded-full bg-nation-light scale-70 origin-center-center uppercase text-xs font-bold w-30 h-30 absolute right-0 -top-5 flex justify-center items-center">
+				<span className="mx-4 my-8 text-center">
+					Trusted by over one billion end users.
+				</span>
+			</div>
 			<div className="flex w-full ">
 				<div className="grow-1.5">
 					<Header className="flex flex-col justify-between">
 						<div>
-							<button className="bg-nation rounded-xl uppercase font-bold tracking-widest pb-1 font-sans px-4">
+							<button className="bg-nation-light rounded-xl uppercase font-bold tracking-widest py-1.5 font-sans px-4">
+								<ArrowMessage className="inline-block mr-1" />
 								STARt free trial
 							</button>
 						</div>

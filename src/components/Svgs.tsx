@@ -47,3 +47,48 @@ export function Arrows(props: ArrowsProps) {
 		</div>
 	);
 }
+
+export function ArrowMessage(props: IconProps) {
+	return (
+		<svg width="1.5em" height="1.5em" viewBox="0 0 24 24" {...props}>
+			<path
+				fill="currentColor"
+				d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12M8 9v2h4.5l-1.8 1.8L12 14l4-4l-4-4l-1.2 1.2L12.5 9H8Z"
+			/>
+		</svg>
+	);
+}
+
+export function LongArrow(props: IconProps) {
+	return (
+		<svg
+			viewBox="20 0 200 56"
+			width="3em"
+			height="1em"
+			fill="currentColor"
+			stroke="currentColor"
+			{...props}
+		>
+			<g>
+				<line
+					className="stroke-5"
+					x1="2"
+					x2="198"
+					y1="28"
+					y2="28"
+					strokeLinejoin="round"
+					strokeLinecap="round"
+					strokeMiterlimit={10}
+				/>
+				<polyline
+					fill="none"
+					className="stroke-5"
+					strokeLinejoin="round"
+					strokeMiterlimit={10}
+					strokeLinecap="round"
+					points="172,2 198,28 172,54"
+				/>
+			</g>
+		</svg>
+	);
+}
