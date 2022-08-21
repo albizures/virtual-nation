@@ -33,8 +33,9 @@ function ItemTree(props: ItemTreeProps) {
 export function Footer() {
 	return (
 		<>
-			<div className="bg-dark-5 py-8  text-white">
-				<div className="max-w-5xl mx-auto flex py-8 justify-between">
+			<div className="bg-dark-5 py-8 px-6 px-0 text-white">
+				{/* <div className="max-w-5xl flex mx-auto flex-col md:flex-row md:space-y-0 py-8 justify-between space-y-8"> */}
+				<div className="max-w-5xl grid grid-cols-2 md:grid-cols-4 mx-auto py-8 gap-y-8">
 					<div>
 						<h4 className="text-sm">
 							<IoIosChatboxes className="inline-block -ml-1 h-4 w-4 mr-3 text-nation" />
@@ -96,26 +97,17 @@ export function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className="bg-dark-9 text-white py-8">
+			<div className="bg-dark-9 px-6 text-white py-8">
 				<div className="max-w-5xl mx-auto">
-					<div className="flex justify-between space-x-30 items-center">
+					<div className="flex flex-col md:flex-row md:justify-between md:space-x-30 items-center">
 						<Logo className="text-white h-20 -ml-4" />
-						<p className="text-right text-sm">
+						<p className="text-center md:text-right text-sm mt-2 md:mt-0">
 							Virtual Nation is proudly designed, built and
 							continually enhance in DMedia and HyperReality with a
 							global remote team.
 						</p>
 					</div>
-					<div className="flex justify-between mt-4">
-						<p>
-							<span className="rounded bg-green w-2 h-2 inline-block mr-1"></span>
-							<span className="opacity-50">
-								System Status{' '}
-								<span className="font-italic">
-									© All Rights Reserved
-								</span>
-							</span>
-						</p>
+					<div className="flex flex-col md:flex-row-reverse justify-between mt-4">
 						<ul className="flex space-x-4 items-center">
 							<li className="opacity-50 hover:underline">
 								<a href="#">Privacy</a>
@@ -149,6 +141,15 @@ export function Footer() {
 								<RiMailLine />
 							</li>
 						</ul>
+						<p className="text-center md:text-left mt-4 md:mt-0s">
+							<span className="rounded bg-green w-2 h-2 inline-block mr-1"></span>
+							<span className="opacity-50">
+								System Status{' '}
+								<span className="font-italic">
+									© All Rights Reserved
+								</span>
+							</span>
+						</p>
 					</div>
 				</div>
 			</div>

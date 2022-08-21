@@ -35,7 +35,7 @@ export function Hero() {
 				muted={true}
 				autoPlay={true}
 			/>
-			<h1 className="text-4xl relative mt-30 text-center font-sans uppercase font-bold text-shadow-sm">
+			<h1 className="text-2xl md:text-4xl relative mt-30 text-center font-sans uppercase font-bold text-shadow-sm">
 				<span className="block">The virtual nation app </span>
 				<span className="block">gives creators</span>
 				<span className="block underline underline-nation underline-4">
@@ -44,7 +44,7 @@ export function Hero() {
 			</h1>
 
 			<div className="absolute w-full bottom-0 flex justify-between p-8">
-				<div className="flex items-center -ml-4">
+				<div className="md:flex items-center -ml-4 hidden ">
 					<Arrows
 						amount={3}
 						className="transform rotate-90 text-2xl -mr-3"
@@ -53,12 +53,28 @@ export function Hero() {
 						scroll
 					</span>
 				</div>
-				<div className="flex space-x-12 items-center">
-					<Feature label="24/7 Support" img={supportImg} />
-					<Feature label="Easy to use" img={configImg} />
-					<Feature label="Private Data" img={lockImg} />
-					<img className="h-12" src={googleImg} alt="google" />
-					<img className="h-12" src={appleImg} alt="apple" />
+				<div className="flex flex-col md:flex-row items-center">
+					<div className="flex md:mr-12 items-center space-x-12 justify-center">
+						<Feature label="24/7 Support" img={supportImg} />
+						<Feature label="Easy to use" img={configImg} />
+						<Feature label="Private Data" img={lockImg} />
+					</div>
+					<div className="flex items-center space-x-4 md:space-x-12 mt-8 md:mt-0">
+						<div>
+							<img
+								className="grow-1 md:h-12"
+								src={googleImg}
+								alt="google"
+							/>
+						</div>
+						<div>
+							<img
+								className="grow-1 md:h-12"
+								src={appleImg}
+								alt="apple"
+							/>
+						</div>
+					</div>
 				</div>
 				<div>{/* space */}</div>
 			</div>

@@ -22,10 +22,9 @@ export default defineConfig({
 			'ml-1 mt-4 text-sm font-medium',
 			'border-l-1 border-gray relative border-opacity-30',
 			'before:(-top-2 -left-1 w-2 h-2 absolute border-gray border-opacity-30 content-empty inline-block rounded border-1)',
-			// 'after:(content-empty bottom-0 -left-1 absolute w-2 h-2 bg-dark-5)',
 		),
 		'tree-item': shortcut(
-			'my-3 translate-y-2',
+			'my-3 translate-y-2 flex items-center',
 			'before:(border-t-1 border-gray border-opacity-30 mr-2 inline-block w-2 align-middle content-empty)',
 		),
 		arrow:
