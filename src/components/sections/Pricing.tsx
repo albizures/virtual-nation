@@ -305,7 +305,7 @@ export function Pricing() {
 						Trusted by over one billion end users.
 					</span>
 				</div>
-				<div className="flex overflow-visible items-center children:flex-1 mb-8">
+				<div className="flex md:hidden overflow-visible items-center children:flex-1 mb-8">
 					<Selector
 						plan="startup"
 						className="rounded-l"
