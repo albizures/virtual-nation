@@ -44,7 +44,6 @@ export default defineConfig({
 		'pricing-tag': shortcut(
 			'w-30 h-30',
 			'absolute -right-13 -top-16 z-0 md:(right-0 -top-5) scale-70 origin-center-center',
-
 			'rounded-full bg-nation-light uppercase text-xs font-bold flex justify-center items-center',
 		),
 	},

@@ -157,6 +157,31 @@ function ItemCell(props: ItemCellProps) {
 	);
 }
 
+interface SelectorProps {
+	plan: Plans;
+	current: Plans;
+	className?: string;
+	onSelect: (value: Plans) => void;
+}
+
+export function Selector(props: SelectorProps) {
+	const { plan, onSelect, current, className } = props;
+	return (
+		<button
+			onClick={() => onSelect(plan)}
+			className={clsx(
+				'p-1 border border-stone-6 capitalize',
+				className,
+				{
+					'shadow font-bold z-10 relative': current === plan,
+				},
+			)}
+		>
+			{plan}
+		</button>
+	);
+}
+
 function Title() {
 	const ref = React.useRef(null);
 	const [status, setStatus] = React.useState<'idle' | 'filling'>(
@@ -280,7 +305,32 @@ export function Pricing() {
 						Trusted by over one billion end users.
 					</span>
 				</div>
-				<div></div>
+				<div className="flex overflow-visible items-center children:flex-1 mb-8">
+					<Selector
+						plan="startup"
+						className="rounded-l"
+						onSelect={setSelected}
+						current={selected}
+					/>
+					<Selector
+						plan="standard"
+						className="border-l-0"
+						onSelect={setSelected}
+						current={selected}
+					/>
+					<Selector
+						plan="premium"
+						className="border-l-0"
+						onSelect={setSelected}
+						current={selected}
+					/>
+					<Selector
+						plan="enterprise"
+						className="border-l-0 rounded-r"
+						onSelect={setSelected}
+						current={selected}
+					/>
+				</div>
 				<table className="w-full">
 					<tbody>
 						<tr className=" md:table-row">
