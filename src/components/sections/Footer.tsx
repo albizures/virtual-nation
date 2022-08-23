@@ -34,7 +34,6 @@ export function Footer() {
 	return (
 		<>
 			<div className="bg-dark-5 py-8 px-6 px-0 text-white">
-				{/* <div className="max-w-5xl flex mx-auto flex-col md:flex-row md:space-y-0 py-8 justify-between space-y-8"> */}
 				<div className="max-w-5xl grid grid-cols-2 md:grid-cols-4 mx-auto py-8 gap-y-8">
 					<div>
 						<h4 className="text-sm">

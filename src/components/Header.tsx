@@ -2,26 +2,82 @@ import clsx from 'clsx';
 import React from 'react';
 import { appleImg, googleImg } from '../assets';
 import { Logo } from './Logo';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 export function Header() {
+	const [isOpen, setIsOpen] = React.useState(false);
+
+	function onToggle() {
+		setIsOpen((current) => {
+			return !current;
+		});
+	}
+
 	return (
-		<header className="absolute top-0 w-full flex justify-between items-center h-16 z-10 text-white px-4">
-			<div className="flex-1">
-				<Logo className="h-16" />
-			</div>
-			<nav className="flex-1 text-xl flex justify-center">
-				<ul className="flex space-x-8 font-sans">
-					<li>Home</li>
-					<li>About Us</li>
-					<li>Contact</li>
-				</ul>
-			</nav>
-			<div className="flex-1 text-right">
-				<a className="font-sans font-bold" href="">
-					Sign Up
-				</a>
-			</div>
-		</header>
+		<div
+			className={clsx('absolute top-0 w-full px-6 z-10', {
+				'inset-0 bg-black': isOpen,
+			})}
+		>
+			<header
+				className={clsx(
+					'flex max-w-5xl mx-auto items-center justify-between h-16 text-white px-4',
+					{
+						'flex-col': isOpen,
+					},
+				)}
+			>
+				<div
+					className={clsx('flex-1 flex ', {
+						'justify-between w-full': isOpen,
+					})}
+				>
+					<Logo className="h-16 -ml-3" />
+					<button
+						className={clsx({
+							'inline-block': isOpen,
+							hidden: !isOpen,
+						})}
+						onClick={onToggle}
+					>
+						<AiOutlineClose className="w-7 h-7" />
+					</button>
+				</div>
+				<nav
+					className={clsx(' md:flex flex-1 text-xl justify-center', {
+						hidden: !isOpen,
+						'flex mt-8': isOpen,
+					})}
+				>
+					<ul className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 font-sans">
+						<li>Home</li>
+						<li>About Us</li>
+						<li>Contact</li>
+					</ul>
+				</nav>
+				<div
+					className={clsx(' md:block flex-1 text-right', {
+						hidden: !isOpen,
+						'block mt-8': isOpen,
+					})}
+				>
+					<a className="font-sans font-bold" href="">
+						Sign Up
+					</a>
+				</div>
+				<div className="md:hidden">
+					<button
+						className={clsx({
+							'inline-block': !isOpen,
+							hidden: isOpen,
+						})}
+						onClick={onToggle}
+					>
+						<AiOutlineMenu className="w-7 h-7" />
+					</button>
+				</div>
+			</header>
+		</div>
 	);
 }
 
@@ -50,7 +106,7 @@ export function StickyHeader() {
 				'flex fixed w-full transition-all h-16 z-30 bg-black text-nation items-center justify-around text-xl',
 				{
 					'top-0': status === 'shown',
-					'-top-16': status === 'hidden',
+					'-top-36': status === 'hidden',
 				},
 			)}
 		>
@@ -67,10 +123,10 @@ export function StickyHeader() {
 			>
 				sign up here
 			</a>
-			<p className="uppercase font-sans font-bold font-sans font-bold">
-				download our app
-			</p>
-			<div className="flex space-x-10">
+			<div className="flex space-x-3 items-center">
+				<p className="uppercase font-sans font-bold font-sans font-bold">
+					download our app
+				</p>
 				<img className="h-12" src={googleImg} alt="google" />
 				<img className="h-12" src={appleImg} alt="apple" />
 			</div>
