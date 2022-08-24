@@ -112,7 +112,7 @@ async function waitForAssets(parent: HTMLElement) {
 			return new Promise((resolve, reject) => {
 				video.defaultMuted = true;
 				video.muted = true;
-				video.addEventListener('canplay', resolve);
+				video.addEventListener('canplaythrough', resolve);
 				video.onerror = reject;
 				video.load();
 			})
