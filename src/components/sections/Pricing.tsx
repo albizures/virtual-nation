@@ -173,7 +173,8 @@ export function Selector(props: SelectorProps) {
 				'p-1 border border-stone-6 capitalize',
 				className,
 				{
-					'shadow font-bold z-10 relative': current === plan,
+					'shadow font-bold z-10 relative bg-stone-6 text-white':
+						current === plan,
 				},
 			)}
 		>
