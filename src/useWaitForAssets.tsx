@@ -103,7 +103,6 @@ async function waitForAssets(parent: HTMLElement) {
 			progress: current.progress + add,
 		});
 	};
-	console.log('add set', videos);
 
 	await Promise.allSettled([
 		...images.map((image) => {
