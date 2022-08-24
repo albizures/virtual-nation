@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { store, createItem, useItemValue } from 'react-take';
 import { Logo } from './components/Logo';
+import { useOverflowHidden } from './useOverflowHidden';
 
 interface ProgressState {
 	total: number;
@@ -29,6 +30,8 @@ type ProgressStatus = 'shown' | 'hidden' | 'hiding';
 export function Progress() {
 	const progress = useItemValue(progressItem, defaultProgress);
 	const [status, setStatus] = React.useState<ProgressStatus>('shown');
+
+	useOverflowHidden(status === 'shown');
 
 	React.useEffect(() => {
 		if (status === 'shown') {

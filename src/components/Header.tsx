@@ -1,16 +1,9 @@
 import clsx from 'clsx';
 import React from 'react';
-import { appleImg, googleImg } from '../assets';
 import { Logo } from './Logo';
+import { appleImg, googleImg } from '../assets';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-
-function useOverflowHidden(isShown: boolean) {
-	React.useEffect(() => {
-		if (isShown) {
-		}
-		document.body.style.overflow = isShown ? 'hidden' : '';
-	}, [isShown]);
-}
+import { useOverflowHidden } from '../useOverflowHidden';
 
 export function Header() {
 	const [isOpen, setIsOpen] = React.useState(false);
