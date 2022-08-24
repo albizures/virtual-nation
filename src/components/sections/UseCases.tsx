@@ -29,6 +29,7 @@ export function UseCases() {
 						className="h-full"
 						loop={true}
 						muted={true}
+						playsInline={true}
 						autoPlay={true}
 						src={networkVideo}
 					></video>
@@ -62,6 +63,7 @@ export function UseCases() {
 					className="h-full relative z-12"
 					loop={true}
 					muted={true}
+					playsInline={true}
 					autoPlay={true}
 					src={texting1Video}
 				></video>
@@ -95,6 +97,7 @@ export function UseCases() {
 					className="h-full relative z-12"
 					loop={true}
 					muted={true}
+					playsInline={true}
 					autoPlay={true}
 					src={texting2Video}
 				></video>
@@ -127,6 +130,7 @@ export function UseCases() {
 					className="h-full relative z-12"
 					loop={true}
 					muted={true}
+					playsInline={true}
 					autoPlay={true}
 					src={streamingVideo}
 				></video>

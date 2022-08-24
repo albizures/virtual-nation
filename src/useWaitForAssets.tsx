@@ -110,8 +110,11 @@ async function waitForAssets(parent: HTMLElement) {
 		}),
 		...videos.map((video) => {
 			return new Promise((resolve, reject) => {
+				video.defaultMuted = true;
+				video.muted = true;
 				video.addEventListener('loadeddata', resolve);
 				video.onerror = reject;
+				video.load();
 			})
 				.then(onDone)
 				.catch(onDone);
