@@ -1,6 +1,7 @@
 import {
 	appleImg,
 	backgroundVideo,
+	background2Video,
 	configImg,
 	googleImg,
 	lockImg,
@@ -35,7 +36,11 @@ export function Hero() {
 				muted={true}
 				playsInline={true}
 				autoPlay={true}
-			/>
+			>
+				<source src={backgroundVideo} type="video/webm" />
+				<source src={background2Video} type="video/mp4" />
+			</video>
+
 			<h1 className="text-2xl md:text-4xl relative mt-30 text-center font-sans uppercase font-bold text-shadow-sm">
 				<span className="block">The virtual nation app </span>
 				<span className="block">gives creators</span>
