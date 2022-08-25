@@ -87,22 +87,30 @@ async function waitForAssets(parent: HTMLElement) {
 		return;
 	}
 	waiting = true;
+	const control = new WeakMap<HTMLElement, boolean>();
 
 	const images = getTagElements<HTMLImageElement>(parent, 'img');
 	const videos = getTagElements<HTMLVideoElement>(parent, 'video');
+
+	images.forEach((el) => control.set(el, false));
+	videos.forEach((el) => control.set(el, false));
 
 	store.setValue(progressItem, {
 		total: images.length + videos.length * 2,
 		progress: 0,
 	});
 
-	const onDone = (add = 1) => {
+	const onDone = (el: HTMLElement) => {
 		const current = store.getValue(progressItem, defaultProgress);
+
+		control.set(el, true);
 
 		store.setValue(progressItem, {
 			total: current.total,
-			progress: current.progress + add,
+			progress: current.progress + 1,
 		});
+
+		console.table(control);
 	};
 
 	await Promise.allSettled([
@@ -111,8 +119,8 @@ async function waitForAssets(parent: HTMLElement) {
 				image.onload = resolve;
 				image.onerror = reject;
 			})
-				.then(() => onDone())
-				.catch(() => onDone());
+				.then(() => onDone(image))
+				.catch(() => onDone(image));
 		}),
 		...videos.map((video) => {
 			return new Promise((resolve, reject) => {
@@ -121,19 +129,19 @@ async function waitForAssets(parent: HTMLElement) {
 				function loadeddata() {
 					console.log('loadeddata', video);
 					video.removeEventListener('loadeddata', loadeddata);
-					onDone();
+					onDone(video);
 				}
 				video.addEventListener('loadeddata', loadeddata);
 				function canplaythrough() {
 					console.log('canplaythrough', video);
 					video.removeEventListener('canplaythrough', canplaythrough);
 					resolve(null);
-					onDone();
+					onDone(video);
 				}
 				video.addEventListener('canplaythrough', canplaythrough);
 				video.onerror = reject;
 				video.load();
-			}).catch(() => onDone());
+			}).catch(() => onDone(video));
 		}),
 	]);
 }
