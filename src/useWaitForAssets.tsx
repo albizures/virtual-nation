@@ -75,6 +75,7 @@ export function Progress() {
 				}}
 			/>
 			<div className="z-10 text-black z-24 absolute inset-0 flex justify-center items-center">
+				{progress.progress}/ {progress.total}
 				<Logo className="h-40 animate-pulse-alt" />
 			</div>
 		</div>
@@ -145,7 +146,6 @@ export function useWaitForAssets() {
 		if (!parent) {
 			return;
 		}
-		console.log('waitForAssets!!!!!');
 
 		waitForAssets(parent);
 	}, []);
