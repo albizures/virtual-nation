@@ -118,18 +118,20 @@ async function waitForAssets(parent: HTMLElement) {
 				video.defaultMuted = true;
 				video.muted = true;
 				function loadeddata() {
+					console.log('loadeddata', video);
 					video.removeEventListener('loadeddata', loadeddata);
 					onDone();
 				}
 				video.addEventListener('loadeddata', loadeddata);
 				function canplaythrough() {
+					console.log('canplaythrough', video);
 					video.removeEventListener('canplaythrough', canplaythrough);
 					resolve(null);
 					onDone();
 				}
 				video.addEventListener('canplaythrough', canplaythrough);
 				video.onerror = reject;
-				// video.load();
+				video.load();
 			}).catch(() => onDone());
 		}),
 	]);
