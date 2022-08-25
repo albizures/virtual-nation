@@ -110,7 +110,7 @@ async function waitForAssets(parent: HTMLElement) {
 			progress: current.progress + 1,
 		});
 
-		console.table(control);
+		console.log(control);
 	};
 
 	await Promise.allSettled([
