@@ -36,8 +36,8 @@ export function Hero() {
 				playsInline={true}
 				autoPlay={true}
 			>
-				<source src={backgroundVideo} type="video/webm" />
-				<source src={background2Video} type="video/mp4" />
+				<source src={background2Video} type="video/webm" />
+				<source src={backgroundVideo} type="video/mp4" />
 			</video>
 
 			<h1 className="text-2xl md:text-4xl relative mt-30 text-center font-sans uppercase font-bold text-shadow-sm">
