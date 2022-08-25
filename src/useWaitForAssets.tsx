@@ -87,13 +87,13 @@ async function waitForAssets(parent: HTMLElement) {
 		return;
 	}
 	waiting = true;
-	const control = new WeakMap<HTMLElement, boolean>();
+	const control = new WeakMap<HTMLElement, number>();
 
 	const images = getTagElements<HTMLImageElement>(parent, 'img');
 	const videos = getTagElements<HTMLVideoElement>(parent, 'video');
 
-	images.forEach((el) => control.set(el, false));
-	videos.forEach((el) => control.set(el, false));
+	images.forEach((el) => control.set(el, 0));
+	videos.forEach((el) => control.set(el, 0));
 
 	store.setValue(progressItem, {
 		total: images.length + videos.length * 2,
@@ -103,7 +103,7 @@ async function waitForAssets(parent: HTMLElement) {
 	const onDone = (el: HTMLElement) => {
 		const current = store.getValue(progressItem, defaultProgress);
 
-		control.set(el, true);
+		control.set(el, control.get(el)! + 1);
 
 		store.setValue(progressItem, {
 			total: current.total,
