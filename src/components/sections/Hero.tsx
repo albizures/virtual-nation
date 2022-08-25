@@ -31,7 +31,6 @@ export function Hero() {
 		<ScreenSection className="flex justify-center relative">
 			<video
 				className="absolute top-1/2 left-1/2 -translate-1/2"
-				src={backgroundVideo}
 				loop={true}
 				muted={true}
 				playsInline={true}
