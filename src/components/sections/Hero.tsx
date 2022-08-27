@@ -48,8 +48,8 @@ export function Hero() {
 			</h1>
 
 			<div className="absolute w-full bottom-0 py-8 px-6">
-				<div className="flex max-w-5xl mx-auto justify-center md:justify-between">
-					<div className="md:flex flex-1 items-center -ml-4 hidden ">
+				<div className="flex max-w-5xl mx-auto justify-center flex-col md:flex-row md:justify-between">
+					<div className="md:flex items-center -ml-4 hidden ">
 						<Arrows
 							amount={3}
 							className="transform rotate-90 text-2xl -mr-3"
@@ -58,30 +58,28 @@ export function Hero() {
 							scroll
 						</span>
 					</div>
-					<div className="flex flex-col md:flex-row items-center">
-						<div className="flex md:mr-12 items-center space-x-12 justify-center">
-							<Feature label="24/7 Support" img={supportImg} />
-							<Feature label="Easy to use" img={configImg} />
-							<Feature label="Private Data" img={lockImg} />
+					<div className="flex items-center space-x-12 justify-center">
+						<Feature label="24/7 Support" img={supportImg} />
+						<Feature label="Easy to use" img={configImg} />
+						<Feature label="Private Data" img={lockImg} />
+					</div>
+					<div className="flex items-center justify-center space-x-4 md:space-x-12 mt-8 md:mt-0">
+						<div>
+							<img
+								className="grow-1 h-12"
+								src={googleImg}
+								alt="google"
+							/>
 						</div>
-						<div className="flex items-center space-x-4 md:space-x-12 mt-8 md:mt-0">
-							<div>
-								<img
-									className="grow-1 h-12"
-									src={googleImg}
-									alt="google"
-								/>
-							</div>
-							<div>
-								<img
-									className="grow-1 h-12"
-									src={appleImg}
-									alt="apple"
-								/>
-							</div>
+						<div>
+							<img
+								className="grow-1 h-12"
+								src={appleImg}
+								alt="apple"
+							/>
 						</div>
 					</div>
-					<div className="hidden md:block flex-1">{/* space */}</div>
+					<div className="hidden md:block ">{/* space */}</div>
 				</div>
 			</div>
 		</ScreenSection>

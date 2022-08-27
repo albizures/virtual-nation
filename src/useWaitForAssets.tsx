@@ -87,11 +87,10 @@ async function waitForAssets(parent: HTMLElement) {
 	}
 	waiting = true;
 
-	const images = getTagElements<HTMLImageElement>(parent, 'img');
 	const videos = getTagElements<HTMLVideoElement>(parent, 'video');
 
 	store.setValue(progressItem, {
-		total: images.length + videos.length * 2,
+		total: videos.length * 2,
 		progress: 0,
 	});
 
@@ -105,33 +104,22 @@ async function waitForAssets(parent: HTMLElement) {
 	};
 
 	await Promise.allSettled([
-		...images.map((image) => {
-			return new Promise((resolve, reject) => {
-				image.onload = resolve;
-				image.onerror = reject;
-			})
-				.then(() => onDone())
-				.catch(() => onDone());
-		}),
 		...videos.map((video) => {
 			return new Promise((resolve, reject) => {
 				video.defaultMuted = true;
 				video.muted = true;
 				function loadeddata() {
-					console.log('loadeddata', video);
 					video.removeEventListener('loadeddata', loadeddata);
 					onDone();
 				}
 				video.addEventListener('loadeddata', loadeddata);
 				function canplaythrough() {
-					console.log('canplaythrough', video);
 					video.removeEventListener('canplaythrough', canplaythrough);
 					resolve(null);
 					onDone();
 				}
 				video.addEventListener('canplaythrough', canplaythrough);
 				video.onerror = reject;
-				video.load();
 			}).catch(() => onDone());
 		}),
 	]);

@@ -120,7 +120,7 @@ export function StickyHeader() {
 	return (
 		<div
 			className={clsx(
-				'flex w-full px-6 fixed transition-all h-16 z-30 bg-black text-nation  text-xl',
+				'flex w-full px-6 fixed transition-all h-16 z-30 bg-black text-nation text-xl',
 				{
 					'top-0 md:flex-row md:items-center md:justify-around':
 						status === 'shown',
@@ -129,7 +129,7 @@ export function StickyHeader() {
 				},
 			)}
 		>
-			<div className="flex w-full justify-between md:px-0">
+			<div className="flex w-full md:w-auto justify-between md:px-0">
 				<Logo className="h-16 -ml-3" />
 
 				<button className={clsx('md:hidden')} onClick={onToggle}>
