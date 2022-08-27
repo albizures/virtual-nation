@@ -88,7 +88,7 @@ async function waitForAssets(parent: HTMLElement) {
 	waiting = true;
 	const control = new WeakMap<HTMLElement, number>();
 
-	const images = getTagElements<HTMLImageElement>(parent, 'img');
+	const images: HTMLVideoElement[] = []; //getTagElements<HTMLImageElement>(parent, 'img');
 	const videos = getTagElements<HTMLVideoElement>(parent, 'video');
 
 	images.forEach((el) => control.set(el, 0));
