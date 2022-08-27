@@ -48,7 +48,7 @@ export function Hero() {
 			</h1>
 
 			<div className="absolute w-full bottom-0 py-8 px-6">
-				<div className="flex max-w-5xl mx-auto justify- md:justify-between">
+				<div className="flex max-w-5xl mx-auto justify-center md:justify-between">
 					<div className="md:flex flex-1 items-center -ml-4 hidden ">
 						<Arrows
 							amount={3}
