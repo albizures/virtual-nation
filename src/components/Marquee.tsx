@@ -12,7 +12,7 @@ export function Marquee(props: MarqueeProps) {
 	return (
 		<div
 			className={clsx(
-				'w-full overflow-hidden absolute pointer-events-none',
+				'overflow-hidden absolute pointer-events-none',
 				className,
 			)}
 		>

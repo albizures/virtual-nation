@@ -298,7 +298,7 @@ export function Pricing() {
 	);
 
 	return (
-		<div className="px-6">
+		<div className="px-6 overflow-hidden">
 			<div className="max-w-5xl mx-auto pb-16 relative">
 				<Title />
 				<div className="pricing-tag">

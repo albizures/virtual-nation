@@ -40,7 +40,7 @@ export default defineConfig({
 		),
 		arrow:
 			'inline-block animate-fade-out animate-count-infinite animate-duration-1s',
-		btn: 'border text-3xl font-sans border-stone-6',
+		btn: 'border text-xl md:text-3xl font-sans border-stone-6',
 		'pricing-tag': shortcut(
 			'w-30 h-30',
 			'absolute -right-13 -top-16 z-0 md:(right-0 -top-5) scale-70 origin-center-center',
