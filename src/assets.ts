@@ -3,7 +3,7 @@ import texting2Video from '../assets/texting2.mp4';
 import networkVideo from '../assets/network.mp4';
 import streamingVideo from '../assets/streaming.mp4';
 import backgroundVideo from '../assets/background.mp4';
-import background2Video from '../assets/background.webm';
+import background2Video from '../assets/background2.mp4';
 import appleImg from '../assets/apple.png';
 import googleImg from '../assets/google.png';
 import lockImg from '../assets/lock.png';

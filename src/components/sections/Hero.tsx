@@ -36,7 +36,7 @@ export function Hero() {
 				playsInline={true}
 				autoPlay={true}
 			>
-				<source src={background2Video} type="video/webm" />
+				<source src={background2Video} type="video/mp4" />
 				<source src={backgroundVideo} type="video/mp4" />
 			</video>
 
