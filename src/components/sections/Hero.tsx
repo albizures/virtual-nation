@@ -1,7 +1,6 @@
 import {
 	appleImg,
-	backgroundVideo,
-	background2Video,
+	bgVideo,
 	configImg,
 	googleImg,
 	lockImg,
@@ -36,8 +35,8 @@ export function Hero() {
 				playsInline={true}
 				autoPlay={true}
 			>
-				<source src={background2Video} type="video/mp4" />
-				<source src={backgroundVideo} type="video/mp4" />
+				<source src={bgVideo.webm} type="video/webm" />
+				<source src={bgVideo.mp4} type="video/mp4" />
 			</video>
 
 			<h1 className="text-2xl md:text-4xl relative mt-30 text-center font-sans uppercase font-bold text-shadow-sm">

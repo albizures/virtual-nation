@@ -31,8 +31,10 @@ export function UseCases() {
 						muted={true}
 						playsInline={true}
 						autoPlay={true}
-						src={networkVideo}
-					></video>
+					>
+						<source src={networkVideo.webm} type="video/webm" />
+						<source src={networkVideo.mp4} type="video/mp4" />
+					</video>
 					<h3 className="transform uppercase whitespace-nowrap font-sans text-center translate-x-0 rotate-90 text-6xl text-black font-bold">
 						Use Cases
 					</h3>
@@ -65,8 +67,10 @@ export function UseCases() {
 					muted={true}
 					playsInline={true}
 					autoPlay={true}
-					src={texting1Video}
-				></video>
+				>
+					<source src={texting1Video.webm} type="video/webm" />
+					<source src={texting1Video.mp4} type="video/mp4" />
+				</video>
 			</div>
 			<div className="h-full mr-30">
 				<div className="flex flex-col justify-center h-full">
@@ -99,8 +103,10 @@ export function UseCases() {
 					muted={true}
 					playsInline={true}
 					autoPlay={true}
-					src={texting2Video}
-				></video>
+				>
+					<source src={texting2Video.webm} type="video/webm" />
+					<source src={texting2Video.mp4} type="video/mp4" />
+				</video>
 			</div>
 			<div className="h-full mr-30">
 				<div className="h-full flex justify-center flex-col">
@@ -132,8 +138,10 @@ export function UseCases() {
 					muted={true}
 					playsInline={true}
 					autoPlay={true}
-					src={streamingVideo}
-				></video>
+				>
+					<source src={streamingVideo.webm} type="video/webm" />
+					<source src={streamingVideo.mp4} type="video/mp4" />
+				</video>
 			</div>
 		</HorizontalSections>
 	);
