@@ -61,7 +61,7 @@ export function Progress() {
 	return (
 		<div
 			className={clsx(
-				'fixed transition-opacity duration-400 inset-0 bg-white z-20',
+				'fixed transition-opacity duration-400 inset-all bg-white z-20',
 				{
 					'opacity-0': status === 'hiding',
 					'opacity-100': status === 'shown',
@@ -74,7 +74,7 @@ export function Progress() {
 					width: `${(progress.progress / progress.total) * 100}%`,
 				}}
 			/>
-			<div className="z-10 text-black z-24 absolute inset-0 flex justify-center items-center">
+			<div className="z-10 text-black z-24 absolute inset-all flex justify-center items-center">
 				<Logo className="h-40 animate-pulse-alt" />
 			</div>
 		</div>

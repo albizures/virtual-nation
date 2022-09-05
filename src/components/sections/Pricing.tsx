@@ -209,7 +209,7 @@ function Title() {
 	return (
 		<div className="text-center mt-20 mb-6 ">
 			<h2 ref={ref} className="inline-block relative z-10">
-				<div className="absolute inset-0 text-center">
+				<div className="absolute inset-all text-center">
 					<div className="w-full mx-auto text-left">
 						<span
 							className={clsx(

@@ -26,8 +26,19 @@ export default defineConfig({
 				visibility: 'collapse',
 			},
 		],
+		[
+			'stick',
+			[
+				['position', ' -webkit-sticky'],
+				['position', ' -moz-sticky'],
+				['position', ' -o-sticky'],
+				['position', ' -ms-sticky'],
+				['position', ' sticky'],
+			],
+		],
 	],
 	shortcuts: {
+		'inset-all': 'top-0 left-0 w-full h-full',
 		'v-h3': 'text-2xl font-sans font-bold',
 		tree: shortcut(
 			'ml-1 mt-4 text-sm font-medium',

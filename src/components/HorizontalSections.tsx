@@ -70,12 +70,13 @@ export function HorizontalSections(props: Props) {
 			style={{
 				height,
 			}}
+			className="relative"
 			ref={containerRef}
 		>
 			<div
 				ref={contentRef}
 				className={clsx(
-					'sticky top-0 h-screen children:inline-block children:vertical-top whitespace-nowrap overflow-hidden',
+					'stick top-0 h-screen children:inline-block children:vertical-top whitespace-nowrap overflow-hidden',
 					className,
 				)}
 			>

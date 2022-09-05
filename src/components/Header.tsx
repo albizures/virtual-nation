@@ -21,7 +21,7 @@ export function Header() {
 			className={clsx(
 				'absolute transition-all top-0 w-full px-6 z-10',
 				{
-					'inset-0 bg-black': isOpen,
+					'inset-all bg-black': isOpen,
 				},
 			)}
 		>
