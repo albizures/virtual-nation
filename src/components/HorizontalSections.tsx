@@ -70,6 +70,7 @@ export function HorizontalSections(props: Props) {
 			style={{
 				height,
 			}}
+			className="relative"
 			ref={containerRef}
 		>
 			<div
