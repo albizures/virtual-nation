@@ -26,6 +26,16 @@ export default defineConfig({
 				visibility: 'collapse',
 			},
 		],
+		[
+			'stick',
+			[
+				['position', ' -webkit-sticky'],
+				['position', ' -moz-sticky'],
+				['position', ' -o-sticky'],
+				['position', ' -ms-sticky'],
+				['position', ' sticky'],
+			],
+		],
 	],
 	shortcuts: {
 		'inset-all': 'top-0 left-0 w-full h-full',
